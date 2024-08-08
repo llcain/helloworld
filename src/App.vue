@@ -1,3 +1,5 @@
+import "./data/samples.json";
+
 <script setup>
 import { ref, onMounted } from 'vue'
 
@@ -18,6 +20,9 @@ onMounted(() => {
 
 <template>
    <button class="button" @click="increment">Count is: {{ count }}</button>
+   <div id="display">
+   </div>
+
 </template>
 
 <style scoped>
