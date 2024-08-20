@@ -1,28 +1,30 @@
-[
-    {
-        "name": "Artistry Studio My Main Sqeeze Moisturizer",
-        "descr": "Good hydration for dry skin. Especially after a workout.",
-        "price": 27
-        
-    },
-    {
-        "name": "Sleep Gummies",
-        "descr": "Will help you fall asleep. You will be well rested in the morning.",
-        "price": 20
-    },
-    {
-        "name": "Berry Special Evening (Cream) Lipstick",
-        "descr": "Radiant lipstick",
-        "price": 25
-    },
-    {
-        "name": "Artistry Studio Zen + Energy Gloss Boss Cleanser + Exfoliator",
-        "descr": "Cleanser and exfoliator. Sweeps away dead skin cells",
-        "price": 18.75
-    },
-    {
-        "name": "Artistry Skin Nutrition Hydrating Mousse Cleanser",
-        "descr": "Aerated, cushiony cleanser mousse. Sweeps away dirt, debris, and other impurities away from skin",
-        "price": 28
-    }
-]
+{
+    "samples": [
+        {
+            "name": "Artistry Studio My Main Sqeeze Moisturizer",
+            "descr": "Good hydration for dry skin. Especially after a workout.",
+            "price": 27
+            
+        },
+        {
+            "name": "Sleep Gummies",
+            "descr": "Will help you fall asleep. You will be well rested in the morning.",
+            "price": 20
+        },
+        {
+            "name": "Berry Special Evening (Cream) Lipstick",
+            "descr": "Radiant lipstick",
+            "price": 25
+        },
+        {
+            "name": "Artistry Studio Zen + Energy Gloss Boss Cleanser + Exfoliator",
+            "descr": "Cleanser and exfoliator. Sweeps away dead skin cells",
+            "price": 18.75
+        },
+        {
+            "name": "Artistry Skin Nutrition Hydrating Mousse Cleanser",
+            "descr": "Aerated, cushiony cleanser mousse. Sweeps away dirt, debris, and other impurities away from skin",
+            "price": 28
+        }
+    ]
+}

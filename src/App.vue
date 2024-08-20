@@ -1,24 +1,18 @@
 
 <script>
 
+import samplesData from './data/samples.json';
 
-
-
-
-import json from './data/samples.json';
-export default{
-    data(){
-        return{
-            myJson: json
-        }
-    },
-    methods: {
-        addSample: function() {
-            json.myJson.data.push({"name": "garlic heart health", "descr": "helps your hear", "price": 35});
+export default {
+    
+    data() {
+        return {
+            samples: samplesData
         }
     }
-}
 
+
+}
 
 </script>
 
@@ -26,10 +20,9 @@ export default{
    
    <div class="main">
     <div class="left">
-        <p class="para" v-for="data in myJson">{{data.price}}</p>
+        <p class="para" v-for="sample in samples" :key="sample.id">{{sample.price}}</p>
     </div>
-    <button @click="addSample">Add Sample</button>
-    <p v-for="data in myJson">{{data.price}}</p>
+   
     <div class="right">
         <form>
             <label for="name">Name:</label><br>
