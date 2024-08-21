@@ -24,8 +24,8 @@ export default {
    </div>
 </template>
 
-<style>
-  p {
-    color: white;
+<style scoped>
+  .para {
+    color: #FFA500;
   }
 </style>
