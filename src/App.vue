@@ -25,7 +25,5 @@ export default {
 </template>
 
 <style scoped>
-  .para {
-    color: #FFA500;
-  }
+  
 </style>
