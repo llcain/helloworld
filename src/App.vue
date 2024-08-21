@@ -18,7 +18,12 @@ export default {
    
    <div class="main">
     <div class="left">
-        <p class="para" v-for="sample in samples" :key="sample.id">{{sample.price}}</p>
+        <p v-for="sample in samples" :key="sample.id">{{sample.price}}</p>
+        <p>bob</p>
+        <ul>
+            <li>home</li>
+            <li>about</li>
+        </ul>
     </div>
     
    </div>
