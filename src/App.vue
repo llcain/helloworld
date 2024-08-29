@@ -7,7 +7,7 @@ export default {
     
     data() {
         return {
-            samples: samplesData
+            samples: samplesData.samples
         }
     }
 }
@@ -18,7 +18,7 @@ export default {
    
    <div class="main">
     <div class="left">
-        <p v-for="sample in samples" :key="sample.id">{{sample.price}}</p>
+        <p v-for="sample in samples" :key="sample.id">{{sample.name}} - {{ sample.price}}$</p>
         <p>bob</p>
         <ul>
             <li>home</li>
