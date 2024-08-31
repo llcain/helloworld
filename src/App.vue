@@ -20,6 +20,7 @@ export default {
     <div class="left">
         <p v-for="sample in samples" :key="sample.id">{{sample.name}} - {{ sample.price}}$</p>
         <p>bob</p>
+        <p>hi</p>
         <ul>
             <li>home</li>
             <li>about</li>
