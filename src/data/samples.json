@@ -2,29 +2,139 @@
     "samples": [
         {
             "name": "Artistry Studio My Main Sqeeze Moisturizer",
-            "descr": "Good hydration for dry skin. Especially after a workout.",
-            "price": 27
-            
+            "instructions": "use on clean skin as desired. Morning moisture, bedtime bliss, on-the-go refreshment",
+            "price": 28            
         },
         {
             "name": "Sleep Gummies",
-            "descr": "Will help you fall asleep. You will be well rested in the morning.",
-            "price": 20
+            "instructions": "Take 2 gummies thirty minute before bedtime. Chew thoroughly before swalling",
+            "price": 19.50
         },
         {
-            "name": "Berry Special Evening (Cream) Lipstick",
-            "descr": "Radiant lipstick",
-            "price": 25
+            "name": "Artistry Go Vibrant Cream Lipstick - Berry Special Evening",
+            "instructions": "With lips slightly open, swip over lips from one side to the other on the bottom",
+            "price": 26
         },
         {
             "name": "Artistry Studio Zen + Energy Gloss Boss Cleanser + Exfoliator",
-            "descr": "Cleanser and exfoliator. Sweeps away dead skin cells",
+            "instructions": "Put an almond-size drop in palm of hand. Rub hands together and massage over wet skin",
             "price": 18.75
         },
         {
             "name": "Artistry Skin Nutrition Hydrating Mousse Cleanser",
-            "descr": "Aerated, cushiony cleanser mousse. Sweeps away dirt, debris, and other impurities away from skin",
+            "instructions": "Dampen face with warm water. Apply 1-2 pumps in hands and massage over skin. Rinse thoroughly and pat dry",
+            "price": 29
+        },
+        {
+            "name": "Artistry Signature Select Brightening Body Cream",
+            "instructions": "Sqeeze cream in hand and apply liberally to skin. Preferly use after bath or shower when skin is still damp",
+            "price": 39
+        },
+        {
+            "name": "Artistry Skin Nutrition Hydrating Eye Gel Cream",
+            "instructions": "Use Pearl size, gently pat under and around the eye area using light tapping motions.",
+            "price": 39
+        },
+        {
+            "name": "XS Raspberry Lemonade Twist Tube",
+            "instructions": "Add 1 twist to 16.9 fluid ounces of cold water",
+            "price": 23
+        },
+        {
+            "name": "XS Joint Health Raspberry Twist Tube",
+            "instructions": "Add 1 twist to 16.9 fluid ounces of cold water",
+            "price": 23
+        },
+        {
+            "name": "Artistry Skin Nutrition Hydrating Gel Cream",
+            "instructions": "Smooth evenly in upward motions over face and neck. Use AM and PM",
+            "price": 43
+        },
+        {
+            "name": "Artistry Skin Nutition Renewing Reactivation Eye Cream",
+            "instructions": "Using a pearl-size amount, gently pat under and around the eye area using light tapping motions. Use AM and PM",
+            "price": 53
+        },
+        {
+            "name": "Artistry Men Facial Moisturizer",
+            "instructions": "Use a pea-size drop. Apply product to your face and throat. Gently massage in circular motion, moving upward and outward, to smooth it over entire face",
+            "price": 46
+        },
+        {
+            "name": "Artistry Men Gentle Face Wash",
+            "instructions": "Dampen your skink with warm water. Apply pea-size drop of cleanser to fingertips. Massage into face and neck in circular motion until you reach a thick lather. Rinse thoroughly with warm water and pat dry with towel",
             "price": 28
-        }
+        },
+        {
+            "name": "Artistry Signature Select Hydrating Body Gel",
+            "instructions": "Sqeeze gel out of the tube and smooth over skin as needed. Use twice daily. Best use after bath or shower when skin is still damp. Can also treat yourself at night to some self-care pampering as you prepare for bed",
+            "price": 31
+        },
+        {
+            "name": "Atistry Go Vibrant Cream Lipstick - Text Me Terracotta",
+            "instructions": "With lips slightly open, swip over lips from one side to the other on the bottom",
+            "price": 26
+        },
+        {
+            "name": "Atistry Go Vibrant Cream Lipstick - Go-Go Cocoa",
+            "instructions": "With lips slightly open, swip over lips from one side to the other on the bottom",
+            "price": 26
+        },
+        {
+            "name": "Atistry Go Vibrant Cream Lipstick - Blush Crush",
+            "instructions": "With lips slightly open, swip over lips from one side to the other on the bottom",
+            "price": 26
+        },
+        {
+            "name": "Atistry Go Vibrant Cream Lipstick - Lunch Date Pink",
+            "instructions": "With lips slightly open, swip over lips from one side to the other on the bottom",
+            "price": 26
+        },
+        {
+            "name": "Atistry Go Vibrant Cream Lipstick - Photobomb Fuchsia",
+            "instructions": "With lips slightly open, swip over lips from one side to the other on the bottom",
+            "price": 26
+        },
+        {
+            "name": "Atistry Go Vibrant Cream Lipstick - Saturday Peach",
+            "instructions": "With lips slightly open, swip over lips from one side to the other on the bottom",
+            "price": 26
+        },
+        {
+            "name": "Atistry Go Vibrant Cream Lipstick - Spice Meets Nice",
+            "instructions": "With lips slightly open, swip over lips from one side to the other on the bottom",
+            "price": 26
+        },
+        {
+            "name": "Atistry Go Vibrant Cream Lipstick - Crush on Coral",
+            "instructions": "With lips slightly open, swip over lips from one side to the other on the bottom",
+            "price": 26
+        },
+        {
+            "name": "Atistry Go Vibrant Cream Lipstick - Secret Crush Scarlet",
+            "instructions": "With lips slightly open, swip over lips from one side to the other on the bottom",
+            "price": 26
+        },
+        {
+            "name": "Atistry Go Vibrant Cream Lipstick - Take Charge Pad",
+            "instructions": "With lips slightly open, swip over lips from one side to the other on the bottom",
+            "price": 26
+        },
+        {
+            "name": "Atistry Go Vibrant Cream Lipstick - Road Trip Red",
+            "instructions": "With lips slightly open, swip over lips from one side to the other on the bottom",
+            "price": 26
+        },
+        {
+            "name": "Atistry Go Vibrant Cream Lipstick - Firecracker Red",
+            "instructions": "With lips slightly open, swip over lips from one side to the other on the bottom",
+            "price": 26
+        },
+        {
+            "name": "Atistry Go Vibrant Cream Lipstick - Weekend Rose",
+            "instructions": "With lips slightly open, swip over lips from one side to the other on the bottom",
+            "price": 26
+        }        
+
     ]
 }
