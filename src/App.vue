@@ -76,17 +76,7 @@ export default {
         <p v-for="sample in samples">{{sample}}</p>
     </div>
     
-    <div className="update">
-        <p v-for="book in books">{{book.title}}</p>
-    </div>
-    <div>
-        <ul className="delete">
-            <li v-for="course in courses">{{course}}</li>
-        </ul>
-    </div>
-    <div className="read">
-        <p v-for="candle in candles">{{candle}}</p>
-    </div>
+    
    </div>
 
 </template>
