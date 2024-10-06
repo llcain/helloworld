@@ -16,11 +16,7 @@ export default {
             {"firstName": "Bill", "lastName": "Banks", "product": "Energy Drink", "age": 35}            
         ];
 
-        funtion handleClick() {
-                const 
-        }
-
-        
+                
 
         // add a sample
         samples.push({"firstName": "sandy", "lastName": "Bells", "product": "lipstick", "age": 23});        
@@ -30,41 +26,30 @@ export default {
             samples,
             message,
             vueClass: "pinkBg",
-            vueSample: "greenBg",
-            handleClick
+            vueSample: "greenBg"
         }
     }    
 }
 
 </script>
 
-<template>
+<template lang="pug">
 
-   <div v-bind:class="vueClass">
-    
-        <h1>Customers and Products</h1>
-        <p>{{message}}</p>
-        <form>
-            <label>Customer Name:</label>
-            <input type="text" placeholder="Enter new customer's name..." v-model="inpText" value="name">
-            <button @click="handleClick">Add New Customer</button>
-        </form>
+   div.vueClass
+        h1 Customer and Products
+        input(type='text' name='name' placeholder='Enter New Customer')
+        input(type='checkbox' checked)
+        input(type='submit')
 
-   </div>
-
-   <div>
-
-        <li></li>
-   </div>
+  
 
    <p v-for="sample in samples" v-bind:class="vueSample">{{sample.firstName}}</p>
 
 </template>
 
 <style>
-    .pinkBg {
-        background-color: lightpink;
-        border: solid black 2px;
+    .vueClass {
+        color: blue;
     }
 
     .greenBg {
