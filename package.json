@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "pug": "^3.0.3",
-    "vue": "^3.4.29"
+    "vue": "^3.4.29",
+    "vuestic-ui": "^1.10.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
