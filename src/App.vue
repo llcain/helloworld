@@ -35,12 +35,11 @@ export default {
 
 <template lang="pug">
 
-   div.vueClass
+div.vueClass
         h1 Customer and Products
         input(type='text' name='name' placeholder='Enter New Customer')
         input(type='checkbox' checked)
-        input(type='submit')
-
+        <VaButton> Button </VaButton>
   
 
    <p v-for="sample in samples" v-bind:class="vueSample">{{sample.firstName}}</p>
