@@ -1,6 +1,6 @@
 
 <script>
-import {ref } from 'vue';
+import { ref } from 'vue';
 
 import sampleData from './data/samples.json';
 
@@ -9,26 +9,20 @@ export default {
     
     setup() {
 
-        const message = "Hello LaQuisha";
-
-        const samples = [
-            {"firstName": "Bob", "lastName": "Doe", "product": "Nutrilite Organic All in one Bar", "age": 43},
-            {"firstName": "Bill", "lastName": "Banks", "product": "Energy Drink", "age": 35}            
-        ];
-
-                
-
-        // add a sample
-        samples.push({"firstName": "sandy", "lastName": "Bells", "product": "lipstick", "age": 23});        
-
+       const employees = ref(['Angela', 'Luke', 'Sara']);
+       const count = ref(0);
+    
+        
        
         return {
-            samples,
-            message,
-            vueClass: "pinkBg",
-            vueSample: "greenBg"
+            employees,
+            count
         }
-    }    
+    },
+    
+    mounted() {
+        console.log(this.count)
+    }
 }
 
 </script>
@@ -37,21 +31,18 @@ export default {
 
 div.vueClass
         h1 Customer and Products
-        input(type='text' name='name' placeholder='Enter New Customer')
-        input(type='checkbox' checked)
-        <VaButton> Button </VaButton>
-  
+        input(type='text'  placeholder='Enter New Customer' v-model='newCustomer')
+        button(type="button") Add
 
-   <p v-for="sample in samples" v-bind:class="vueSample">{{sample.firstName}}</p>
+container#customer-container.customer
+    p(v-for="employee in employees") {{employee}}
+    button("v-on:click"='count++') {{ count }}
+    
+    
+    
 
 </template>
 
 <style>
-    .vueClass {
-        color: blue;
-    }
-
-    .greenBg {
-        color: green;
-    }
+   
 </style>
