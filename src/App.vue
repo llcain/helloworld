@@ -65,6 +65,7 @@ div.vueClass
 
 container#customer-container.customer
     p(v-for="employee in employees") {{employee}}
+        button delete
     button(@click='count++') {{ count }}
     
 
