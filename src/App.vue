@@ -9,48 +9,13 @@ export default {
     
     setup() {
 
-       const employees = ref(['Angela', 'Luke', 'Sara']);
-       const count = ref(0);
-    
-        function getInputValue() {
-           const customerInput = document.getElementById('customerInput');
-           const customerValue = customerInput.value;
-           document.getElementById('customerlist').innerHTML = customerValue;
-           customerInput.value = '';
-        }
-
-        function add() {
-            let taskValue = document.getElementById('taskInput');
-            if(taskValue.length == 0) {
-                alert('Enter a task')
-            } else {
-                document.getElementById('#tasks').innerHTML += `
-                 const newdiv = document.createElement('newdiv');
-
-                    <div id="tasks">
-                        <span id="taskname">
-                            ${document.querySelector('#newtask input').value}
-                           <button>Delete</button>
-                        </span>
-                    </div>
-                `;
-
-                
-            }
-        }
+       const employees = ref(['Angela', 'Luke', 'Sara']);  
 
        
        
         return {
             employees,
-            count,
-            getInputValue,
-            add
         }
-    },
-    
-    mounted() {
-        console.log(this.count)
     }
 }
 
@@ -59,29 +24,22 @@ export default {
 <template lang="pug">
 
 div.vueClass
-        h1 Customer and Products
+        h1 Customers
         input(type='text' name='customername' required id="customerInput"  placeholder='Enter New Customer' v-model='newCustomer')
         button(@click='getInputValue' type="button" id="push") Add
 
 container#customer-container.customer
-    p(v-for="employee in employees") {{employee}}
-        button delete
-    button(@click='count++') {{ count }}
-    
+    li.employeeList(v-for="employee in employees") {{employee}}
+        VaButton delete   
 
-div#customerlist
-
-div.container
-    div#task
-        input#taskInput(type='text' placeholder='Add Task')
-        button#push(@click='add') Add
-    div#tasks
-    
+div#customerlist 
     
     
 
 </template>
 
 <style>
-   
+   .employeeList {
+    list-style-type: none;
+   }
 </style>
