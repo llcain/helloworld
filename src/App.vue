@@ -9,17 +9,25 @@ export default {
     
     setup() {
 
-       const employees = ref(['Angela', 'Luke', 'Sara']); 
-       
+       const customerNames = ref(['Angela', 'Luke', 'Sara']);
+       const newCustomer = ref("");
 
-       function getInputValue () {
-            const inputValue = input.value;
-            employees.push(inputValue);
-       }
+       const items = ref([]);
+       const newItem = ref('');
+
+       function addItem() {
+        items.value.push(newItem.value);
+        newItem.value = '';
+       }     
+
+       
        
         return {
-            employees,
-            getInputValue
+            customerNames,
+            newCustomer,
+            items,
+            newItem,
+            addItem
         }
     }
 }
@@ -30,15 +38,24 @@ export default {
 
 div.vueClass
         h1 Customers
-        input(type='text' name='customername' required id="customerInput"  placeholder='Enter New Customer' v-model='newCustomer')
-        button.addButton(@click='getInputValue' type="button" id="push") Add
+        input(type='text' name='customername' required id="customerInput"  placeholder='Enter New Customer' v-model="newCustomer")
+        button.addButton(type="button" id="push") Add
 
-container#customer-container.customer
-    li.employeeList(v-for="employee in employees") {{employee}}
+div#customer-container.customer
+    li.employeeList(v-for="customerName in customerNames") {{customerName}}
         VaButton update
         VaButton delete   
 
-div#customerlist    
+div#customerlist 
+p newCustomer value: {{newCustomer}}  
+
+div
+    input(type='text' v-model="newItem" placeholder="Item")
+    button(@click="addItem") Add Customer
+
+    ul
+        li(v-for= "(item, index) in items" :key="index") {{ item}}
+            VaButton delete
     
 
 </template>
