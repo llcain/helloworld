@@ -1,36 +1,24 @@
 
-<script>
+<script setup>
 import { ref } from 'vue';
 
 import sampleData from './data/samples.json';
 
-export default {
-   
-    
-    setup() {
+    const customers = ref([]);
+    const newCustomer = ref("");
 
-       const customerNames = ref(['Angela', 'Luke', 'Sara']);
-       const newCustomer = ref("");
+    function addCustomer() {
+        customers.value.push(newCustomer.value);
+        newCustomer.value = '';
+    }
 
        const items = ref([]);
        const newItem = ref('');
 
-       function addItem() {
+    function addItem() {
         items.value.push(newItem.value);
         newItem.value = '';
-       }     
-
-       
-       
-        return {
-            customerNames,
-            newCustomer,
-            items,
-            newItem,
-            addItem
-        }
-    }
-}
+    }    
 
 </script>
 
@@ -39,24 +27,21 @@ export default {
 div.vueClass
         h1 Customers
         input(type='text' name='customername' required id="customerInput"  placeholder='Enter New Customer' v-model="newCustomer")
-        button.addButton(type="button" id="push") Add
+        button.addCustomer(@click="addCustomer" type="button" id="push") Add
 
 div#customer-container.customer
-    li.employeeList(v-for="customerName in customerNames") {{customerName}}
-        VaButton update
+    li.employeeList(v-for= "(customer, index) in customers" :key="index") {{ customer }}
         VaButton delete   
 
-div#customerlist 
-p newCustomer value: {{newCustomer}}  
+div#customerlist  
 
 div
     input(type='text' v-model="newItem" placeholder="Item")
-    button(@click="addItem") Add Customer
+    button(@click="addItem") Add Item
 
     ul
-        li(v-for= "(item, index) in items" :key="index") {{ item}}
-            VaButton delete
-    
+        li(v-for= "(item, index) in items" :key="index") {{ item }}
+            VaButton delete   
 
 </template>
 
