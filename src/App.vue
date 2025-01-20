@@ -1,5 +1,6 @@
 
 <script setup>
+import  { Authenticator } from '@aws-amplify/ui-vue';
 import { ref } from 'vue';
 
 import sampleData from './data/samples.json';
@@ -23,6 +24,7 @@ import sampleData from './data/samples.json';
 </script>
 
 <template lang="pug">
+authenticator
 
 div.vueClass
         h1 Customers
@@ -41,7 +43,8 @@ div
 
     ul
         li(v-for= "(item, index) in items" :key="index") {{ item }}
-            VaButton delete   
+            VaButton delete 
+              
 
 </template>
 

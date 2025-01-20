@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aws-amplify/ui-vue": "^4.2.26",
+    "aws-amplify": "^6.12.0",
     "pug": "^3.0.3",
     "vue": "^3.4.29",
     "vuestic-ui": "^1.10.2"
