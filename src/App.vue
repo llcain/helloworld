@@ -39,7 +39,7 @@ div#customerlist
 
 div
     input(type='text' v-model="newItem" placeholder="Item")
-    button(@click="addItem") Add Item
+    button.addButton(@click="addItem") Add Item
 
     ul
         li(v-for= "(item, index) in items" :key="index") {{ item }}
@@ -53,7 +53,7 @@ div
     list-style-type: none;
    }
    .addButton {
-    background-Color: #808000;
+    background-Color:rgb(128, 0, 43);
     padding: 5px;
    }
 </style>
