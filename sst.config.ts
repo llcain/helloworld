@@ -1,5 +1,7 @@
 /// <reference path="./.sst/platform/config.d.ts" />
 
+import { Dynamo } from "./.sst/platform/src/components/aws";
+
 export default $config({
   app(input) {
     return {
@@ -9,5 +11,7 @@ export default $config({
       home: "aws",
     };
   },
-  async run() {},
+  async run() {
+    
+  },
 });
