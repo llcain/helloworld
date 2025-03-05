@@ -1,10 +1,13 @@
+/// <reference path="./.sst/platform/config.d.ts" />
 
-
-export default {
-    config(_input) {
-        return {
-            name: "vue-app",
-            region: "us-east-2",
-        };
-    },
-} 
+export default $config({
+  app(input) {
+    return {
+      name: "helloworld",
+      removal: input?.stage === "production" ? "retain" : "remove",
+      protect: ["production"].includes(input?.stage),
+      home: "aws",
+    };
+  },
+  async run() {},
+});
