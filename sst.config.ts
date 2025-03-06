@@ -12,6 +12,16 @@ export default $config({
     };
   },
   async run() {
+
+    
+    const table = new sst.aws.Dynamo("MyTable", {
+      fields: {
+        customerId: "string",
+        customerName: "string",
+        phoneNumber: "number"
+      },
+      primaryIndex: { hashKey: "customerId"}
+    })
     
   },
 });
