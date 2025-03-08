@@ -13,6 +13,13 @@ export default $config({
   },
   async run() {
 
+    new sst.aws.StaticSite("MyWeb", {
+      build: {
+        command: "npm run build",
+        output: "dist"
+      }
+    });
+
     
     const table = new sst.aws.Dynamo("MyTable", {
       fields: {
@@ -22,6 +29,12 @@ export default $config({
       },
       primaryIndex: { hashKey: "customerId"}
     })
+
+   const api = new sst.aws.ApiGatewayV1("MyApi");
+
+   api.route("GET /", "src/get.handler");
+
+   api.deploy();
     
   },
 });

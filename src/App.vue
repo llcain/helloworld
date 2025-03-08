@@ -53,7 +53,7 @@ div
     list-style-type: none;
    }
    .addButton {
-    background-Color:rgb(128, 0, 43);
+    background-Color:rgb(226, 49, 138);
     padding: 5px;
    }
 </style>
