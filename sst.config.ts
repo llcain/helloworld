@@ -13,12 +13,16 @@ export default $config({
   },
   async run() {
 
-    new sst.aws.StaticSite("MyWeb", {
-      build: {
-        command: "npm run build",
-        output: "dist"
-      }
-    });
+    // new sst.aws.StaticSite("MyWeb", {
+    //   build: {
+    //     command: "npm run build",
+    //     output: "dist"
+    //   }
+    // });
+    // new sst.aws.Vuejs("MyVueApp", {
+    //   link: [table],
+    //   link: [api],
+    // })
 
     
     const table = new sst.aws.Dynamo("MyTable", {
