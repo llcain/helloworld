@@ -25,7 +25,7 @@ export default $config({
     // })
 
     
-    const table = new sst.aws.Dynamo("MyTable", {
+    const table = new sst.aws.Dynamo("MyCustomersTable", {
       fields: {
         customerId: "string",
         customerName: "string",
@@ -36,7 +36,10 @@ export default $config({
 
    const api = new sst.aws.ApiGatewayV1("MyApi");
 
-   api.route("GET /", "src/get.handler");
+   api.route("GET /items", "/api/lambda.js");
+   api.route("GET /items/{customer_id}", "/api/lambda.js");
+   api.route("PUT /items", "/api/lambda.js");
+   api.route("DELETE /items/{customer_id}", "/api/lambda.js");
 
    api.deploy();
     
