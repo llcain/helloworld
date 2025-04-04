@@ -8,8 +8,7 @@ export default $config({
       name: "helloworld",
       removal: input?.stage === "production" ? "retain" : "remove",
       protect: ["production"].includes(input?.stage),
-      home: "aws",
-      profile: "default"
+      home: "aws",      
     };
   },
   async run() {
