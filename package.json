@@ -14,7 +14,7 @@
     "@serverless-stack/resources": "^1.18.4",
     "aws-amplify": "^6.12.0",
     "pug": "^3.0.3",
-    "sst": "3.9.26",
+    "sst": "^3.13.7",
     "vue": "^3.4.29",
     "vuestic-ui": "^1.10.2"
   },
