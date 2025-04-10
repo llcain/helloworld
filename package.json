@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@aws-amplify/ui-vue": "^4.2.26",
+    "@serverless-stack/cli": "^1.18.4",
+    "@serverless-stack/resources": "^1.18.4",
     "aws-amplify": "^6.12.0",
     "pug": "^3.0.3",
     "sst": "3.9.26",
