@@ -1,44 +1,43 @@
-import { StackContext, StaticSite, Table, Api } from "@serverless-stack/resources"; // Correct import
+/// <reference path="./.sst/platform/config.d.ts" />
 
-export default function MyStack({ stack }: StackContext) {
-  // DynamoDB Table
-  const table = new Table(stack, "MyCustomersTable", {
-    fields: {
-      customerId: "string",
-      customerName: "string",
-      phoneNumber: "string",
-    },
-    primaryIndex: { partitionKey: "customerId" },
-  });
+export default $config({
+  app(input) {
+    return {
+      name: "helloworld",
+      removal: input?.stage === "production" ? "retain" : "remove",
+      protect: ["production"].includes(input?.stage),
+      home: "aws",
+    };
+  },
 
-  // API Gateway (with Lambda)
-  const api = new Api(stack, "MyApi", {
-    routes: {
-      "GET /items": "packages/functions/src/lambda.handler",
-      "GET /items/{customer_id}": "packages/functions/src/lambda.handler",
-      "PUT /items": "packages/functions/src/lambda.handler",
-      "DELETE /items/{customer_id}": "packages/functions/src/lambda.handler",
-    },
-    defaults: {
-      function: {
-        bind: [table],
+  async run() {
+    // DynamoDB table
+    const table = new sst.aws.Dynamo("MyCustomersTable", {
+      fields: {
+        customerId: "string",
+        customerName: "string",
+        phoneNumber: "number",
       },
-    },
-  });
+      primaryIndex: { hashKey: "customerId" },
+    });
 
-  // Static Site (Vue app)
-  const site = new StaticSite(stack, "VueSite", {
-    path: "packages/frontend",  // Path to your Vue app
-    buildCommand: "npm run build",  // Command to build the Vue app
-    buildOutput: "dist",  // Output folder after build
-    environment: {
-      VITE_API_URL: api.url,  // API URL passed to the Vue app as an environment variable
-      TABLE_NAME: table.tableName,  // Table name passed to the Vue app as an environment variable
-    },
-  });
+    // Lambda-backed API
+    const api = new sst.aws.ApiGatewayV1("MyApi");
 
-  stack.addOutputs({
-    SiteURL: site.url,  // Output the URL of the deployed Vue app
-    ApiEndpoint: api.url,  // Output the URL of the API
-  });
-}
+    api.route("GET /items", "./api/lambda.js");
+    api.route("GET /items/{customer_id}", "./api/lambda.js");
+    api.route("PUT /items", "./api/lambda.js");
+    api.route("DELETE /items/{customer_id}", "./api/lambda.js");
+
+    api.deploy();
+
+    // Static Vue site
+    new sst.aws.StaticSite("MyWeb", {
+      build: {
+        command: "npm run build",
+        output: "dist",
+      },
+      link: [table, api], // Correct way to link both
+    });
+  },
+});
