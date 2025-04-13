@@ -36,8 +36,7 @@ export default $config({
       build: {
         command: "npm run build",
         output: "dist",
-      },
-      link: [table, api], // Correct way to link both
+      }
     });
   },
 });
