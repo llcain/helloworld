@@ -22,14 +22,12 @@ export default $config({
     });
 
     // Lambda-backed API
-    const api = new sst.aws.ApiGatewayV1("MyApi");
+    const api = new sst.aws.ApiGatewayV2("MyApi");
 
     api.route("GET /items", "./api/lambda.js");
     api.route("GET /items/{customer_id}", "./api/lambda.js");
     api.route("PUT /items", "./api/lambda.js");
     api.route("DELETE /items/{customer_id}", "./api/lambda.js");
-
-    api.deploy();
 
     // Static Vue site
     new sst.aws.StaticSite("MyWeb", {
