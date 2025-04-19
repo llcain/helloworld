@@ -19,6 +19,10 @@ export default $config({
         phoneNumber: "number",
       },
       primaryIndex: { hashKey: "customerId" },
+      globalIndexes: {
+        byCustomerName: { hashKey: "customerName" },
+        byPhoneNumber: { hashKey: "phoneNumber" },
+      },
     });
 
     // Lambda-backed API
@@ -31,10 +35,11 @@ export default $config({
 
     // Static Vue site
     new sst.aws.StaticSite("MyWeb", {
+      path: ".",
       build: {
         command: "npm run build",
         output: "dist",
-      }
+      },
     });
   },
 });
