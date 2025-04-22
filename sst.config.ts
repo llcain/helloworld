@@ -39,8 +39,7 @@ export default $config({
       build: {
         command: "npm run build",
         output: "dist",
-      }
-      
+      }      
     });
   },
 });
