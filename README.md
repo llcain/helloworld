@@ -5,3 +5,18 @@ Customer Inventory App
 Project Description 
 
 The Customer Inventory Application help me keep track of my customer's information (first and last name, and phone number) and items they purchased. I may add the costs($) of their item(s)
+
+Installation Option
+
+You can clone repo in folder: 
+
+Steps:
+
+1. create folder by typing ["mkdir nameoffolder"] command in location you want the project to be cloned
+
+2. create repository on github
+
+3. clone project in folder by typing ['git clone [https of repository created on gihub] command inside folder created in step 1'] - on a side note...
+
+Thought on creating .env file, making sure .env file is in
+.gitignore before pushing code to github - If .gitignore file is not created. Type [touch .gitignore] command in terminal. That way, .env file will not be tracked or pushed to github
