@@ -20,3 +20,17 @@ Steps:
 
 Thought on creating .env file, making sure .env file is in
 .gitignore before pushing code to github - If .gitignore file is not created. Type [touch .gitignore] command in terminal. That way, .env file will not be tracked or pushed to github
+
+create Vue/Vite project with name in folder you want project to be in
+
+Steps:
+
+create folder
+
+Thought - you can create Vue/Vite (Frontend Framework) in folder - there are steps to get this done 
+
+    a. create folder - mkdir [name of folder]
+    b. go insde the folder created - type [cd name of folder]
+    c. create vue project in folder -  npx create vite@lastest .   command
+
+remember to have node installed
