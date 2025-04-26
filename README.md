@@ -45,4 +45,12 @@ Your vue/vite project will display at local host 5173
 
 Remember to have node installed in vs code Ubuntu WSL (Window Subsystem for Linex) - if node is not installed, follow the following steps:
 
-1. go to node.js
+1. go to node.js to download and install
+
+
+#Install dependencies
+
+[Pug]
+[Vuestic UI]
+[Tailwind CSS]
+[SST]
