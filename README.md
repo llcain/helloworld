@@ -55,3 +55,5 @@ Remember to have node installed in vs code Ubuntu WSL (Window Subsystem for Line
 [Tailwind CSS]
 [SST]
 
+Create Vue template
+
