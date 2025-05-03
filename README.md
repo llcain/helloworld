@@ -1,10 +1,16 @@
 Project Name
+# 🚀 Customer Inventory App
 
-Customer Inventory App
+## 📝 Project Description 
 
-Project Description 
+The **Customer Inventory App** helps track and manage customer data, including:
 
-The Customer Inventory Application help me keep track of my customer's information (first and last name, and phone number) and items they purchased. I may add the costs($) of their item(s)
+- First and last names
+- Phone numbers
+- Purchased items
+- Optional: cost of each item
+
+The app uses a modern tech stack with a Vue-based frontend and a serverless AWS backend.
 
 Installation Option
 
@@ -50,7 +56,7 @@ Remember to have node installed in vs code Ubuntu WSL (Window Subsystem for Line
 
 #Install dependencies
 
-[Pug]
+[Pug] - install to give code a cleaner look  and more concise syntax - templates are more readable and compact
 [Vuestic UI]
 [Tailwind CSS]
 [SST]
