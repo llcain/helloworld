@@ -5,10 +5,8 @@ Project Name
 
 The **Customer Inventory App** helps track and manage customer data, including:
 
-- First and last names
-- Phone numbers
-- Purchased items
-- Optional: cost of each item
+- First names
+
 
 The app uses a modern tech stack with a Vue-based frontend and a serverless AWS backend.
 
@@ -62,4 +60,10 @@ Remember to have node installed in vs code Ubuntu WSL (Window Subsystem for Line
 [SST]
 
 Create Vue template
+
+Challenge to improve the Customer Inventory App: Start tracking and manage customer data:
+
+- Phone numbers
+- Purchased items
+- Optional: cost of each item
 
