@@ -1,69 +1,57 @@
-Project Name
-# 🚀 Customer Inventory App
+# My Fullstack Serverless Customer Inventory Vue App
 
-## 📝 Project Description 
+A modern fullstack application powered by **Vue 3**, **Vuestic UI**, and **Tailwind CSS** on the frontend, and **AWS Lambda**, **API Gateway v2**, **DynamoDB**, and **Cognito** via **SST (Serverless Stack)** on the backend. Authentication and hosting are managed using **AWS Amplify UI**.
 
-The **Customer Inventory App** helps track and manage customer data, including:
+---
 
-- First names
+## 🧱 Stack Overview
 
+### Frontend
+- [Vue 3](https://vuejs.org/)
+- [Vite](https://vitejs.dev/)
+- [Pug](https://pugjs.org/)
+- [Vuestic UI](https://vuestic.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [AWS Amplify UI](https://ui.docs.amplify.aws/)
 
-The app uses a modern tech stack with a Vue-based frontend and a serverless AWS backend.
+### Backend / Infrastructure
+- [SST (Serverless Stack)](https://sst.dev/)
+- [AWS Lambda](https://docs.aws.amazon.com/lambda/)
+- [API Gateway v2 (HTTP API)](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api.html)
+- [DynamoDB](https://docs.aws.amazon.com/dynamodb/)
+- [Amazon Cognito](https://docs.aws.amazon.com/cognito/)
 
-Installation Option
+---
 
-#You can clone repo in folder: 
+## 🚀 Getting Started
 
-Steps:
+### Prerequisites
 
-1. create folder by typing [mkdir nameoffolder] command in location you want the project to be cloned
+- Node.js >= 18.x
+- AWS CLI configured
+- SST CLI installed: `npm install -g sst`
+- Amplify CLI (optional): `npm install -g @aws-amplify/cli`
 
-2. create repository on github
+---
 
-3. clone project in folder by typing [git clone [https of repository created on gihub] command inside folder created in step 1] - on a side note...
+### 1. Clone and Install
 
-Thought on creating .env file, making sure .env file is in
-.gitignore before pushing code to github - If .gitignore file is not created. Type [touch .gitignore] command in terminal. That way, .env file will not be tracked or pushed to github
-
-#Create Vue/Vite project with name in folder you want project to be in
-
-Steps:
-
-1. create folder
-
-2. create vue/vite project - npx create vite@latest project-name
-
-3. go into project-name - cd project-name command
-
-4. npm install - to install dependencies
-
-5. npm run dev - to run developer server
-
-Your vue/vite project will display at local host 5173
-
-#Thought - you can create Vue/Vite (Frontend Framework) in folder - there are steps to get this done 
-
-    a. create folder - mkdir [name of folder]
-    b. go insde the folder created - type [cd name of folder]
-    c. create vue project in folder -  npx create vite@latest .   command
-
-Remember to have node installed in vs code Ubuntu WSL (Window Subsystem for Linex) - if node is not installed, follow the following steps:
-
-1. go to node.js to download and install
+```bash
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
+npm install
 
 
-#Install dependencies
 
-[Pug] - install to give code a cleaner look  and more concise syntax - templates are more readable and compact
-[Vuestic UI]
-[Tailwind CSS]
-[SST]
+## 🧪 Challenge: Improve the Customer Inventory App
 
-Create Vue template
+Help enhance the functionality of the Customer Inventory App by implementing additional customer data tracking features.
 
-Challenge to improve the Customer Inventory App: Start tracking and manage customer data:
+### Goals
 
-- Phone numbers
-- Purchased items
-- Optional: cost of each item
+Extend the current system to support:
+
+- 📞 Phone numbers
+- 🛒 Purchased items (list per customer)
+- 💰 (Optional) Cost of each purchased item
 
