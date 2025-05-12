@@ -38,7 +38,7 @@ A modern fullstack application powered by **Vue 3**, **Vuestic UI**, and **Tailw
 
 ```bash
 git clone https://github.com/llcain/helloworld.git
-cd your-repo
+cd helloworld
 npm install
 
 
