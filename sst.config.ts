@@ -1,5 +1,9 @@
 /// <reference path="./.sst/platform/config.d.ts" />
 
+import { Cognito } from "./.sst/platform/src/components/aws";
+
+
+
 export default $config({
   app(input) {
     return {
@@ -10,7 +14,14 @@ export default $config({
     };
   },
 
+ 
+
   async run() {
+    const userPool = new Cognito.UserPool("UserPool");
+    const userPoolClient = new Cognito.UserPoolClient("UserPoolClient", {
+      userPool,
+    });
+
     // DynamoDB table
     const table = new sst.aws.Dynamo("MyCustomersTable", {
       fields: {
@@ -34,8 +45,13 @@ export default $config({
     api.route("DELETE /items/{customer_id}", "./api/lambda.js");
 
     // Static Vue site
+
+    
     new sst.aws.StaticSite("MyWeb", {
-      path: ".",
+      environment: {
+        VITE_USER_POOL_ID: userPool.id,
+        VITE_USER_POOL_CLIENT_ID: userPoolClient.id,
+      },
       build: {
         command: "npm run build",
         output: "dist",
