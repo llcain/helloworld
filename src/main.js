@@ -10,4 +10,4 @@ import '@aws-amplify/ui-vue/styles.css';
 
 Amplify.configure(awsconfig);
 
-createApp(App).use(createVuestic()).mount("#app");
+createApp(App).mount("#app");

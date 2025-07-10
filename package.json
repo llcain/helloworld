@@ -11,6 +11,8 @@
   "dependencies": {
     "@aws-amplify/ui-vue": "^4.2.26",
     "aws-amplify": "^6.12.0",
+    "aws-cdk-lib": "^2.202.0",
+    "constructs": "^10.4.2",
     "pug": "^3.0.3",
     "sst": "^3.13.10",
     "vue": "^3.4.29",

@@ -25,10 +25,7 @@ import sampleData from './data/samples.json';
 
 <template lang="pug">
 authenticator
-    template(v-slot="{ user, signOut }")
-        div
-            h1 Hello {{ user.username }}
-            button(@click="signOut") Sign Out
+    
 div.vueClass
         h1 Customers
         input(type='text' name='customername' required id="customerInput"  placeholder='Enter New Customer' v-model="newCustomer")
