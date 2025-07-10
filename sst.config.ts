@@ -12,7 +12,7 @@ export default $config({
     };
   },
 
-  async  run({app}) {
+  async  run() {
     // 1. DynamoDB Table
     const table = new sst.aws.Dynamo("MyCustomersTable", {
       fields: {
@@ -50,7 +50,6 @@ export default $config({
         output: "dist",
       },
       environment: {
-        VITE_REGION: app.region,
         VITE_USER_POOL_ID: userPool.id,
         VITE_USER_POOL_CLIENT_ID: userPoolClient.id,
         VITE_API_URL: api.url,
